@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <img src="./assets/img/burgers.png" alt="Burger">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <H2>Fresh Burgers!</H2>
+            {{#each burger_data}}
+            {{#unless devoured}}
+            <div>
+                {{burger_name}} <button value={{id}} class="devour"> eat-da-burger</button>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+
+        <div class="col-sm">
+            <H2>Devoured Burgers</H2>
+            {{#each burger_data}}
+            {{#if devoured}}
+            <div>
+                {{burger_name}}
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+<input type="text" id="burgerName"><button id="addBurger">Add</button>
