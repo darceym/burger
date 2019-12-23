@@ -1,3 +1,7 @@
 body{
     background-color: #ffcc00;
-};
+}
+
+#burger{
+    height: 10rem;
+}
